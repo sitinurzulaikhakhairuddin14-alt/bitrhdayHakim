@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Sayang 💖</title>
+  <link rel="stylesheet" href="../css/style-index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Babyboo 💕</h1>
+    <p class="subtitle">from your baby 🥰</p>
+
+    <div class="button-group">
+      <a href="../html/ucapan.html" class="btn">bukak la ni hehe 🎁</a>
+    </div>
+  </div>
+
+  <!-- confetti script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    setInterval(function() {
+      confetti({
+        particleCount: 6,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 6,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      });
+    }, 300);
+  </script>
+</body>
+</html>

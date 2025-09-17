@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery 💖</title>
+  <link rel="stylesheet" href="../css/style-gallery.css">
+</head>
+<body>
+  <div class="hearts"></div>
+
+  <div class="container">
+    <h1> Untuk Baby 💖</h1>
+    
+    <div class="gallery">
+      <!-- Ganti src dengan gambar awak sendiri -->
+      <img src="../image/gambar1.jpg" alt="My Special Image">
+    </div>
+
+    <a href="../html/index.html" class="btn">Back Home 🏠</a>
+  </div>
+
+  <!-- Floating hearts script -->
+  <script>
+    const hearts = document.querySelector('.hearts');
+    for(let i=0; i<25; i++){
+      let heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 90 + "%";
+      hearts.appendChild(heart);
+    }
+  </script>
+</body>
+</html>

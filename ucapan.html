@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Sweet Wishes 💌</title>
+  <link rel="stylesheet" href="../css/style-ucapan.css">
+</head>
+<body>
+  <div class="hearts"></div>
+
+  <div class="container">
+    <h1>💖 Happy Birthday Babyboo! 💖</h1>
+    <p class="message">
+      Happy Birthdayy babyboo !! ❤️ semogaa panjang umur dimurahkan rezeki selaluu 🥰<br>
+      Woaa babyyboo orangg daa besarr hehe, daa boleh kawen dah ni 🤣 dengar cakapp mama abah okayy?<br>
+      Jangannn selalu melawan hehe. Babyy orangg nakk babyy tauu orangg bangga sangat dengan baby yangg sekarang!!<br>
+      Daa bnyak berubahh dari sebelum ni hehe, kejar masa depan okay? Orangg sentiasaa ada, support dengan apa yang baby buattt 💋<br>
+      Baby thankyouu tauu daaa jadi yangg terbaikk ☹️❤️ selaluu buat orang happy selalu layann perangai buruk orang ni hehe 😂<br>
+      Orang bersyukur gilaa dapat baby, baby selalu ada dengan orangg, support orangg, dengaq semuaa yang problemm orang,<br>
+      thankyouu babyy kalau tkdk baby mungkin orang dah jadi shrek hm 😔❤️<br>
+      Orang nak mintak maaf sebab belum jadi yang terbaik untuk baby , babyy jangan berubahh okayy?<br>
+      Sayang orang mcm ni sampai bilaa bilaa tau 🥰 kitaa jaga relayy ni smpai bilaa ii tauuu!<br>
+      Sayangggg babyy sangat sangattt!! Happy Birthday againn loveee! ❤️ Enjoyyy urr dayyy :3
+    </p>
+
+    <a href="../html/gallery.html" class="btn">Next 📸</a>
+  </div>
+
+  <!-- Floating hearts script -->
+  <script>
+    const hearts = document.querySelector('.hearts');
+    for(let i=0; i<25; i++){
+      let heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 90 + "%"; // random horizontal
+      hearts.appendChild(heart);
+    }
+  </script>
+</body>
+</html>

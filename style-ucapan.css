@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #fff); /* pink putih */
+  color: #ff4d88;
+  min-height: 100vh; /* boleh scroll */
+  overflow-x: hidden;
+  position: relative;
+  text-align: center;
+  padding-bottom: 100px; /* space bawah untuk scroll */
+}
+
+/* Hearts animation - comel & playful */
+.hearts .heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff6699;
+  transform: rotate(45deg);
+  bottom: -20px;
+  animation: floatUp 6s ease-in-out infinite;
+  opacity: 0.8;
+  z-index: 0; /* belakang container */
+}
+
+.hearts .heart::before,
+.hearts .heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff6699;
+  border-radius: 50%;
+}
+
+.hearts .heart::before { top: -7.5px; left: 0; }
+.hearts .heart::after { left: 7.5px; top: 0; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+  50% { transform: translateY(-300px) rotate(45deg); opacity: 0.7; }
+  100% { transform: translateY(-600px) rotate(45deg); opacity: 0; }
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.6);
+  position: relative;
+  z-index: 1;
+  margin: 50px auto;
+}
+
+/* Fade-in text */
+.container h1, .container .message, .container .btn {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.container h1 { animation-delay: 0.5s; }
+.container .message { animation-delay: 1s; }
+.container .btn { animation-delay: 2s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Text style */
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ff1a75;
+  text-shadow: 2px 2px rgba(255, 182, 193, 0.3);
+}
+
+.message {
+  font-size: 18px; /* kecil sikit */
+  line-height: 1.6;
+  color: #ff4d88;
+  margin-bottom: 40px;
+  white-space: pre-line;
+  text-align: left; /* nampak macam wish lebih personal */
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 15px;
+  background: #ff4d88;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background: #ff80aa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
